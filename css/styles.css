@@ -1,0 +1,177 @@
+@font-face {
+	font-family: brandonreg;
+	src: url(../fonts/brandonreg.otf);
+ }
+ 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: brandonreg, sans-serif;
+	background-color: black;
+}
+ 
+nav {
+	background: #0b0b0b;
+	width: 100%;
+}
+
+.spacelogo {
+	height: 65px;
+}
+
+.grid-container {
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1300px;
+	grid-gap: 30px;
+	padding: 50px;
+}
+	
+.grid-container > div {
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	height: 225px;
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: white;
+}
+
+.grid-item-inner {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.provisions-labels > div{
+	line-height: 25px;
+	margin-top: 10px;
+	color: grey;
+}
+
+.progressbar {
+	background: #ccc;
+	width: 70%;
+	height: 25px;
+	margin: 0 auto;
+	margin-top: 10px;	
+	border: 1px solid black;
+	overflow: hidden;
+	border-radius: 50px;
+}
+
+.bars {
+	width: 100%;
+}
+
+.progress {
+	background: lightgreen;
+	height: 100%;
+	width: 0%;
+	transition: width 0.3s;
+	border-right: 1px solid black;
+}
+
+.speedometer {
+	width: 250px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../images/speedometer.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	position: relative;
+}
+
+.pointer {
+	width: 120px;
+	height: 120px;
+	transition: transform 0.3s;
+}
+
+.distance {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	margin-top: 20px;
+	
+}
+
+.distance img {
+	height: 100%;
+}
+
+.earth {
+	background-image: url(../images/earth.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.distance-bar {
+	height: 50px;
+	border: 2px solid black;
+	overflow: hidden;
+	border-radius: 50px;
+}
+
+.distance-progress {
+	height: 100%;
+	width: 0%;
+	background: black;
+	transition: width 1s ease-out;
+}
+
+.spaceship {
+	transform: rotate(90deg);
+	float: right;
+	margin-right: 10px;
+}
+
+.mars {
+	transform: scale(0.6);
+}
+.current-distance {
+	text-align: center;
+	width: 100%;
+}
+
+.item4 {
+	order: -1;
+	grid-column: span 2;
+}
+
+@media (max-width: 1200px) {
+	.grid-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+	
+@media (max-width: 900px) {
+	.grid-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 400px) {
+	.grid-container {
+		padding: 15px;
+		grid-gap: 15px;
+	}
+	
+	.spacelogo {
+		width: 100%;
+	}	
+}
+
+
+
+
+
+
+
